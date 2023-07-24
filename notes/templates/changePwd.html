@@ -1,0 +1,66 @@
+{% extends 'userNavigation.html'%}
+
+{% load static %}
+{% block body %}
+
+
+{% if error == "no" %}
+<script>
+    alert("Password Changed successfully");
+    window.location = ("{% url 'userLogin' %}");
+</script>
+{% endif %}
+
+{% if error == "yes" %}
+<script>
+    alert("Wrong old password Or New Password, Try Again");
+</script>
+{% endif %}
+
+
+
+<!-- stylesheet link -->
+<link rel="stylesheet" href="{% static 'css/user.css' %}">
+<link rel="stylesheet" href="{%static 'css/style.css'%}">
+
+<section class="container p-5">
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="{% static  'images/resetPwd.jpg' %}" width="100%" alt="">
+        </div>
+        <div class="col-sm-6">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <div class="col-12">
+                        <input type="password" name="oldPwd" class="form-control" placeholder="Old Password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12">
+                        <input type="password" name="newPwd" class="form-control" id="inputPassword"
+                            placeholder="New Password">
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-12">
+                        <input type="password" name="confirmPwd" class="form-control" id="inputPassword"
+                            placeholder="Confrim Password">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-3">
+                        <input type="submit" class="btn sign-in" value="Update"></input>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+
+{% endblock %}

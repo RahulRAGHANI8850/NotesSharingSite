@@ -1,0 +1,30 @@
+{% extends 'navigation.html'%}
+{% load static %}
+{% block body %}
+
+
+<!-- stylesheet link -->
+<link rel="stylesheet" href="{%static 'css/style.css'%}">
+
+<section class="container contact p-5">
+    <div class="row">
+        <div class="col-sm-6 pb-5">
+            <h2>Select From  <span class="fa fa-map"></span> Map :</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.4233642896484!2d72.61704307420158!3d23.081592914125167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e815997f192f3%3A0x98647ef607619de5!2s92%2FA%2C%20Sardarnagar%2C%20Hansol%2C%20Ahmedabad%2C%20Gujarat%20382475!5e0!3m2!1sen!2sin!4v1689736574131!5m2!1sen!2sin"
+                 style="border:0; width: 100%; height: 400px;" allowfullscreen="" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-sm-6 contact-links  mt-sm-5 ">
+            <h2>Connect Via <span class="fa fa-link"></span> Links :</h2>
+            <p><span class="fa fa-envelope-o"> Email : <a href="mailto:rahulraghani0704@gmail.com" target="_blank">rahulraghani0704@gmail.com</a></span></p>
+            <p><span class="fa fa-phone"> Phone : <a href="tel:8490840718" target="_blank">8490840718</a></span></p>
+            <p><span class="fa fa-"> LinkedIn : <a href="https://www.linkedin.com/in/rahul-raghani-433a66228" target="_blank">https://www.linkedin.com/in/rahul-raghani-433a66228/</a></span></p>
+            <p><span class="fa fa-"> Portfolio : <a href="https://rr-portfolio.000webhostapp.com/" target="_blank">https://rr-portfolio.000webhostapp.com/</a></span></p>
+            <p><span class="fa fa-address-book"> Address : <a href="#">92/A Hansol Road Near Sai-Temple </a> </span></p>
+            <p><span class="fa fa-clock-o"> Timings : <a href="#"> 10:00 am to 7:00 am</a></span></p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

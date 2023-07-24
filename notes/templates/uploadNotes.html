@@ -1,0 +1,119 @@
+{% extends 'userNavigation.html' %}
+{% load static %}
+{% block body %}
+
+
+
+
+{% if error == "no"%}
+<script>
+    alert("Notes Uploaded successfullly");
+    window.location = ("{% url 'userPendingNotes' %}");
+</script>
+{% endif %}
+
+
+{% if error == "yes"%}
+<script>
+    alert("Somthing wont wrong!! Upload Again")
+    window.location = ("{% url 'uploadNotes' %}");
+</script>
+{% endif %}
+<!-- style sheet -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<section class="container mt-5 text-center ">
+    <div class="row">
+        <div class="col-12">
+            <h1>Upload Your Notes</h1>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row ">
+        <div class="col-sm-5 mt-2 p-5">
+            <img src="{% static 'images/upload.jpg' %}" alt="" width="100%">
+        </div>
+
+        <div class="col-sm-7 m-auto p-5">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <label for="branch">Select Branch</label>
+                        <div class="col-sm-12">
+                            <select class="form-control" name="Branch" id="branch">
+                                <option value="bcom">Select Branch</option>
+                                <option value="bcom">BCOM</option>
+                                <option value="mcom">MCOM</option>
+                                <option value="bba">BBA</option>
+                                <option value="mba">MBA</option>
+                                <option value="bca">BCA</option>
+                                <option value="mca">MCA</option>
+                                <option value="bsc">BSC</option>
+                                <option value="msc">MSC</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <label for="Subject">Subject</label>
+                        <input type="text" class="form-control" name="Subject" placeholder="Enter Subject">
+                    </div>
+                </div>
+
+
+                <!-- ye he field file upload ki ye bi check karna he  -->
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <label for="NOTES">Select Notes File </label>
+                        <input type="file" class="form-control"  name="uploadFile">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <label for="branch">File Type</label>
+                        <div class="col-sm-12">
+                            <select class="form-control" name="FileType" id="branch">
+                                <option value="#">Select File Type </option>
+                                <option value="pdf">PDF</option>
+                                <option value="pdf">PPTX</option>
+                                <option value="doc">DOC/DOCX</option>
+                                <option value="txt">TXT</option>
+                                <option value="image">Image</option>
+                                <option value="zip-rar">ZIP/RAR</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <label for="Description">Description</label>
+                        <textarea name="Description" style="width: 100%;" rows="6"
+                            placeholder="enter Description"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-2 ">
+                        <input type="submit" class="btn sign-in" value="Register"></input>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

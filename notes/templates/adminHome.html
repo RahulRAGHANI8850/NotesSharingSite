@@ -1,0 +1,52 @@
+
+{% extends 'adminNavigation.html' %}
+{% load static %}
+{% block body %}
+
+<!-- style sheet -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<section class="container mt-5 text-center pt-5">
+    <h1>Hello , {{ user.get_username }} <br> Welcome To Notes sharing site  </h1>
+</section>
+
+
+<section class="container text-center p-5 p-sm-0">
+    <div class="row notes-data">
+        <div class="col-sm-3 col-12">
+            <div class="pending">
+                <h2>{{pn}}</h2>
+                <a href="{% url 'pendingNotes' %}">Pending Notes</a>
+            </div>
+        </div>
+
+        <div class="col-sm-3 col-12">
+            <div class="accepted">
+                <h2>{{ac}}</h2>
+                <a href="{% url 'acceptedNotes' %}">Accepted Notes</a>
+            </div>
+        </div>
+
+        <div class="col-sm-3 col-12">
+            <div class="rejected">
+                <h2>{{re}}</h2>
+                <a href="{% url 'rejectedNotes' %}">Rejected Notes</a>
+            </div>
+        </div>
+
+        <div class="col-sm-3 col-12">
+            <div class="all">
+                <h2>{{all}}</h2>
+                <a href="{% url 'allNotes' %}">All Notes</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

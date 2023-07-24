@@ -1,0 +1,82 @@
+{% extends 'navigation.html'%}
+{% load static %}
+{% block body %}
+
+<!-- stylesheet link -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<section class="container about-us">
+    <div class="row">
+        <div class="col-sm-6 m-auto text-center">
+            <img src="../static/images/about_us_1.jpg" alt="about_us">
+        </div>
+
+        <div class="col-12">
+            <p class="text-center">Welcome to Note Sharing Site! 🌟 We are a dedicated platform that aims to be your
+                ultimate
+                source of knowledge and learning across various fields. Whether you're a student 🎓, a professional 🏢, or
+                an
+                inquisitive mind seeking to expand your horizons, we have the perfect notes and resources to cater to your
+                needs.</p>    
+        </div>    
+    </div>
+</section>
+
+
+
+<section class="container" style="margin-top: 50px; margin-bottom: 50px;">
+    <div class="row mission">
+        <div class="col-12 text-center">
+            <h1>Our Mission</h1>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="col-sm-4 mission">
+            <img src="../static/images/mission.jpg" alt="">
+        </div>
+        <div class="col-sm-7 offset-sm-1 mission ">
+            <p>At Note Sharing Site, we believe that education and information should be accessible to all. Our mission
+                is to break down the barriers that often hinder the pursuit of knowledge. By providing comprehensive
+                notes and study materials for different fields, we empower our users to unlock their full potential and
+                achieve academic and professional excellence.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="container" style="margin-top: 50px; margin-bottom: 50px;">
+    <div class="row">
+        <div class="col-12 text-center our-community">
+            <h1>Join Our Community 🤝</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-7 our-community">
+            <p> At Note Sharing Site, we believe in the power of community. Join our platform to connect with
+                like-minded individuals, engage in discussions, and share your insights with others. Learning is a
+                collaborative journey, and together, we can foster a supportive environment where knowledge knows no
+                bounds.</p>
+        </div>
+        <div class="col-sm-5 our-community">
+            <img src="../static/images/community.jpg" alt="community">
+        </div>
+    </div>
+</section>
+
+
+<section class="container thanks">
+    <div class="row">
+        <div class="col-lg-12">
+            <p>Thank you for choosing Note Sharing Site as your trusted companion in your pursuit of knowledge. We are
+                dedicated to helping you succeed and become the best version of yourself. Start exploring our vast
+                repository of notes and embark on a transformative learning experience today!</p>
+        </div>
+        <div class="col-lg-12">
+            <p>Unlock the doors of knowledge at Note Sharing Site - Your Path to Excellence! 🚀📚</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

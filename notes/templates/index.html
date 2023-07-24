@@ -1,0 +1,51 @@
+{% extends 'navigation.html'%}
+{% load static %}
+
+{% block body %}
+
+<!-- stylesheet link -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!-- banner -->
+<div id="banner">
+    <div class="banner-contnet text-center">
+        <h1>The better you study <br> the better you perform</h1>
+    </div>
+</div>
+
+
+<!-- four setps sec  -->
+<div class="container text-center pt-5"><h2 class="steps-text">Steps To perform </h2></div>
+<div class="four-steps container">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="steps">
+                <p> <span class="fa fa-user-circle"></span></p>
+                <p> Cerate Account </p>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="steps">
+                <p> <span class="fa fa-sign-in"></span></p>
+                <p>Login Account</p>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="steps">
+                <p> <span class="fa fa-upload"> </span></p>
+                <p>Upload Notes</p>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="steps">
+                <p> <span class="fa fa-download"></span></p>
+                <p> Download Notes</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

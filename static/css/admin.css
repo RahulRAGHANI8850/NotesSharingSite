@@ -1,0 +1,37 @@
+#admin-navbar{
+    color: white;
+    padding:15px 5px;
+}
+.navbar-toggler{
+    background-color: white !important;
+}
+.navbar-nav a{
+    font-size: 1.1rem !important;
+}
+.dropdown-menu{
+    padding: 5px;
+    text-align: center !important;
+    background-color: #343a40 !important;
+}
+
+
+
+@media screen and (max-width:1400px){
+    html{
+        font-size: 15px !important;
+    }
+}
+
+
+@media screen and (max-width:1000px){
+    html{
+        font-size: 10px !important;
+    }
+}
+
+
+@media screen and (max-width:570px){
+    html{
+        font-size: 15px !important;
+    }
+}

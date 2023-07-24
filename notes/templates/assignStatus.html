@@ -1,0 +1,52 @@
+{% extends 'adminNavigation.html'%}
+
+{% load static %}
+
+{% block body %}
+
+<!-- style sheet -->
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
+<link rel="stylesheet" href="{% static 'css/admin.css'%}">
+
+<div class="container mt-3">
+    <div class="row">
+        <h1 class="text-center">Assign status</h1>
+        <div class="col-sm-12">
+            <form method="post">
+                {% csrf_token %}
+                <div class="from-group">
+                    <label>Note Id</label>
+                    <input type="text" name="notesId" value="{{notes.id}}" readonly class="form-control">  
+                </div>
+
+                <div class="from-group">
+                    <label>Status</label>
+                    <select name="status" class="form-control">
+                        <option value="accepted">Accept</option>
+                        <option value="rejected">Reject</option>
+                    </select>
+                </div>
+
+                <input type="submit" value="Assign status" class="btn btn-primary mt-5">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% if error == "no" %}
+<script>
+    alert("Status Changed successfully"); 
+    window.location("{% url 'userHome' %}")
+</script>
+{% endif %}
+
+{% if error == "yes" %}
+<script>
+    alert("Wrong detail Try Again");
+</script>
+{% endif %}
+
+
+
+{% endblock %}
